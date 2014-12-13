@@ -1,0 +1,107 @@
+#username {
+	width: 100%;
+	height: 60px;
+	padding-left: 40px;
+	margin-top: 5px;
+	font-size:30px;
+}
+
+#passwd {
+	width: 100%;
+	height: 60px;
+	padding-left: 40px;
+	font-size:30px;
+}
+
+#email {
+	width: 100%;
+	height: 60px;
+	padding-left: 40px;
+	display: none;
+	font-size:30px;
+}
+
+#submit1 {
+	width: 47%;
+	height: 60px;
+	color: white;
+	font-size:30px;
+	background: black;
+	float:left;
+}
+
+#goSignUp {
+	width: 47%;
+	height: 60px;
+	font-size:30px;
+	color: white;
+	background: black;
+	padding:8px;
+	float:right;
+	cursor:pointer;
+}
+
+#goLogIn {
+	width: 47%;
+	height: 60px;
+	font-size:30px;
+	color: white;
+	background: black;
+	display: none;
+	padding:8px;
+	float:right;
+	cursor:pointer;
+}
+
+
+#loginTitle {
+	margin-bottom: 0px;
+}
+
+
+/* unvisited link */
+a.helpful:link {
+    color: white;
+}
+
+/* visited link */
+a.helpful:visited {
+    color: white;
+}
+
+#wrappermiddle {
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}	
+
+#emailDiv {
+  visibility: hidden;
+}
+
+#loginText {
+	display: none;
+	color: white;
+}
+
+#signUpText {
+	display: block;
+	color: white;
+	margin-top: 10px;
+}
+
+#registerTitle {
+	display: none;
+}
+
+#warning {
+  color: red;
+  width:100%;
+  font-size: 22px;
+  bottom:10px;
+  margin:auto;
+  position:absolute;
+  visibility: hidden;
+}

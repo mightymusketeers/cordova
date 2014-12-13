@@ -1,0 +1,350 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+	
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #95B9C7;
+}
+
+#gameContainer
+{
+    /*zoom:75%;*/
+    overflow:hidden;
+}
+#mainTitle{
+  font-size: 40px;
+  background: black;
+  color: white;
+  padding:30px;
+  height: 17%;
+  width: 100%;
+  top: 0px;
+}
+
+#emailDiv
+{
+	height:15%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+li {
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  width: 100%;
+  top: 5px;
+  left: 5px;
+}
+
+#menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+  background-color: grey;
+}
+#menu.main {
+  background: url("imgs/b2.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+#menu.credits {
+  background-image: url('imgs/b2.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#menu.inGame {
+   background-color: #fff;
+   background-color: rgba(255,255,255,0.5);
+}
+#loginTitle, #registerTitle
+{
+	padding:30px;
+}
+
+
+#progress {
+  height: 12%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#percent {
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#progress-bar {
+  width: 200px;
+}
+
+#tapToRetry
+{
+    color:#e74c3c;
+}
+.sound {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: -1;
+}
+.sound-on {
+  background-image: url('imgs/soundOn.png');
+  background-repeat: no-repeat;
+}
+.sound-off {
+  background-image: url('imgs/soundOff.png');
+  background-repeat: no-repeat;
+}
+.gameStatus {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 60px;
+  width: 30px;
+  height: 25px;
+  cursor: default;
+  z-index: 3;
+}
+.playGame {
+  background-image: url('imgs/play.png');
+  background-repeat: no-repeat;
+}
+.pauseGame {
+  background-image: url('imgs/pause.png');
+  background-repeat: no-repeat;
+}
+
+#main {
+  display: none;
+  height: 60%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#main h1 {
+  color: #f39c12;
+  -webkit-text-stroke: 0.5px black;
+  font-size: 45px;
+  font-family: futura;
+  margin-top:-12px;
+}
+/*
+.button {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #AA2666;
+  color: white;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+
+.button:hover {
+  background-color: #B30D5D;
+  background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
+  background-image:         linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
+}*/
+
+.button {
+	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+	background-color:#c62d1f;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:28px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+    height: 100px;
+    width: 300px;
+}
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24437), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24437 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24437', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24437;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+#credits {
+  display: none;
+  line-height: 30px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#credits li {
+  padding: 5px 0;
+}
+
+.artwork, .music, .developer {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.artwork {
+  color: #fa8526;
+}
+.music {
+  color: #e6e71f;
+}
+.developer {
+  color: #13eb8a;
+}
+
+.back, .back:hover {
+  margin-top: 10px;
+}
+
+#game-over {
+  display: none;
+  text-align: center;
+  padding-top: 20%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+}
+
+#game-over h2
+{
+    font-size: 200%;
+    font-family: futura;
+}
+
+#siteTitle {
+	font-size: 80px !important;
+}
+
+
+#inGameMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin:auto;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+
+
+
+.inGameMenuButton {
+  top: 0;
+  float: left;
+  width: 30%;
+  position: relative;
+  height: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: futura;
+  font-size: 20px;
+}
+
+#inGameButton4{
+    float:right;
+    cursor:pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 100px;
+    background: #605F61;
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+	zoom:200%;       
+}
+
+#inGameButton4:before {
+    content: "×";
+}
+
+.inGameMenuDiv {
+  color: white;
+  height: 315px;
+  width: 560px;
+  margin-top: 45px;
+  margin-left: 20px;
+  font-family: futura;
+  z-index: 999;
+  display:none;
+}
+
+#statistics
+{
+	display:"";
+}
